@@ -17,15 +17,15 @@ function Proxy(cfg)
         this.user = cfg.user
         this.pass = cfg.pass
     }
-    this.NotAlive = new Timer(cfg.ttl * 1000);
+    this.notAlive = new Timer(cfg.ttl * 1000);
     //Number of connections
     this.connections = 0
-    //Amount of times registered
+    //Amount of times used
     this.reg_amount = 0
 }
 
 //Proxy list class
-function ProxiesList()
+function ProxiesPool()
 {
     this.proxies = {}
 
@@ -72,17 +72,22 @@ function ProxiesList()
     //Auto deletes unusable proxies
     this.FilterProxy = function(k)
     {
-        if(this.proxies[k].NotAlive.Check())
+        if(this.proxies[k].notAlive.Check())
         {
             delete this.proxies[k];
             return false;
         }
-        //If proxy is used for registeration on enough accounts
-        if(this.proxies[k].reg_amount >= config.mass_register.max_per_ip)
+
+        if(config.mass_register.max_per_ip != 0)
         {
-            delete this.proxies[k];
-            return false;
+            //If proxy is used for registeration on enough accounts
+            if(this.proxies[k].reg_amount >= config.mass_register.max_per_ip)
+            {
+                delete this.proxies[k];
+                return false;
+            }
         }
+
         //If too many accounts are on this proxy
         if(this.proxies[k].connections >= config.max_accs_per_proxy)
         {
@@ -152,4 +157,4 @@ function ProxiesList()
 
 
 
-module.exports = {ProxiesList}
+module.exports = {ProxiesPool}

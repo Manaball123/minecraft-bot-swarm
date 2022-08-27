@@ -223,11 +223,11 @@ function MCClient(name, proxy)
 }
 
 
-function MCClientsList(proxyL)
+function MCClientsPool(proxyP)
 {
     this.clients = {}
     this.names_hist = []
-    this.proxyList = proxyL
+    this.proxyPool = proxyP
     this.CreateClient = function(name, pw, proxy)
     {
         this.clients[name] = new MCClient(name, pw, proxy);
