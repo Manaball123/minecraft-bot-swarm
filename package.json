@@ -1,8 +1,8 @@
 {
-  "name": "bobox_generator_for_a_specific_minecraft_server",
+  "name": "minecraft-bot-swarm",
   "version": "1.0.0",
   "description": "idk",
-  "main": "test.js",
+  "main": "main.js",
   "dependencies": {
     "minecraft-protocol": "x",
     "mineflayer": "x",
