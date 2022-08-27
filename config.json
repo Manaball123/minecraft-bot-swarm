@@ -1,0 +1,65 @@
+{
+
+  "spam" : false,
+  "mass_register" : 
+  {
+    "enabled" : true,
+      
+    "reg_msg" : "/reg Mana_on_top123 Mana_on_top123",
+    "max_per_ip" : 3
+    },
+    "pay" : 
+    {
+      "enabled" : true,
+      "pay_msg" : "/pay JewishBanker 1000"
+    },
+
+  
+  "ip": "mc.forevermemory.top",
+  "port": 25565,
+  "version": "1.18.2",
+  "loginintervalms": 100,
+
+  "altening": false,
+  "altening_token": "",
+
+  "socks_version": 5,
+  "socks_version2": "socks5",
+  "max_accs_per_proxy" : 2,
+  "maxattemptsperproxy": 2,
+  "chat_cooldown" : 500,
+  "auth" : "offline",
+  "generate_offlines" : 
+  {
+    "enabled" : true,
+    "gen_fn" : "./namesdb.txt",
+    "save" : "true"
+    
+  },
+
+  "proxy_api" :
+  {
+    "enabled" : true,
+    "url" : "http://api.sgxz.cn:12080/getip",
+    "token" : "d4297ad34d2c4c04757d28d802859ea1",
+    "target_num" : 500,
+    "check_delay" : 1024
+  },
+  "reconnect" :
+  {
+    "enabled" : true,
+    "times" : 5,
+    "delay" : 3200
+  },
+
+
+  "target_num_accounts" : 200,
+  "num_accounts_per_connect" : 10,
+  "connection_delay" : 1000,
+  
+
+
+
+  "physics": false,
+  "log_packets": false
+}

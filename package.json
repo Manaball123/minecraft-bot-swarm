@@ -1,0 +1,17 @@
+{
+  "name": "bobox_generator_for_a_specific_minecraft_server",
+  "version": "1.0.0",
+  "description": "idk",
+  "main": "test.js",
+  "dependencies": {
+    "minecraft-protocol": "x",
+    "mineflayer": "x",
+    "mineflayer-pathfinder": "x",
+    "snekfetch": "x",
+    "socks": "^2.5.1",
+    "socks5-client": "^1.2.8"
+  },
+  "devDependencies": {
+    "proxy-agent": "^4.0.0"
+  }
+}
